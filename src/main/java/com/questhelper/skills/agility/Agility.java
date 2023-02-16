@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023, jLereback <https://github.com/jLereback>
+ * Copyright (c) 2023, jLereback <https://github.com/jLereback, JesperBodin <https://github.com/JesperBodin>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -36,16 +36,13 @@ import com.questhelper.requirements.player.SkillRequirement;
 import com.questhelper.requirements.util.LogicType;
 import com.questhelper.rewards.UnlockReward;
 import com.questhelper.steps.ConditionalStep;
-import com.questhelper.steps.ObjectStep;
 import com.questhelper.steps.QuestStep;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import net.runelite.api.ItemID;
-import net.runelite.api.ObjectID;
 import static net.runelite.api.Skill.AGILITY;
-import net.runelite.api.coords.WorldPoint;
 
 @QuestDescriptor(
 	quest = QuestHelperQuest.AGILITY
@@ -55,21 +52,22 @@ public class Agility extends ComplexStateQuestHelper
 	// TODO::Rellekka and Ardougne
 {
 	// Items recommended
-	ItemRequirement bootsOfLightness, gracefulOutfit, gracefulHood, gracefulTop, gracefulLegs, gracefulGloves, gracefulBoots, gracefulCape;
+	ItemRequirement bootsOfLightness, gracefulOutfit, gracefulHood, gracefulTop,
+		gracefulLegs, gracefulGloves, gracefulBoots, gracefulCape;
 
 	SkillRequirement ag10, ag20, ag30, ag40, ag50, ag60, ag70, ag80, ag90;
 
 	SkillRequirement ag45;
 
-	AgilityCourse gnomeStronghold, draynorVillage, alKharid, varrock, canifis, falador, seersVillage, pollnivneach;
-	ConditionalStep gnomeStep, draynorStep, alKharidStep, varrockStep, canifisStep, faladorStep, seersStep, pollnivneachStep;
-	QuestStep rellekka, ardougne;
+	AgilityCourse gnomeStronghold, draynorVillage, alKharid, varrock, canifis,
+		falador, seersVillage, pollnivneach, rellekka, ardougne;
+	ConditionalStep gnomeStep, draynorStep, alKharidStep, varrockStep, canifisStep,
+		faladorStep, seersStep, pollnivneachStep, rellekkaStep, ardougneStep;
 
 	@Override
 	public QuestStep loadStep()
 	{
 		setupRequirements();
-		setupSteps();
 
 		gnomeStep = gnomeStronghold.loadStep();
 		draynorStep = draynorVillage.loadStep();
@@ -77,14 +75,15 @@ public class Agility extends ComplexStateQuestHelper
 		varrockStep = varrock.loadStep();
 		canifisStep = canifis.loadStep();
 		faladorStep = falador.loadStep();
-
 		seersStep = seersVillage.loadStep();
 		pollnivneachStep = pollnivneach.loadStep();
+		rellekkaStep = rellekka.loadStep();
+		ardougneStep = ardougne.loadStep();
+
 
 		ConditionalStep superStep = new ConditionalStep(this, gnomeStep);
 		superStep.addStep(ag90, ardougne);
 		superStep.addStep(ag80, rellekka);
-
 		superStep.addStep(ag60, seersStep);
 		superStep.addStep(ag70, pollnivneachStep);
 		superStep.addStep(ag40, canifisStep);
@@ -108,6 +107,8 @@ public class Agility extends ComplexStateQuestHelper
 		falador = new Falador(this);
 		seersVillage = new SeersVillage(this);
 		pollnivneach = new Pollnivneach(this);
+		rellekka = new Rellekka(this);
+		ardougne = new Ardougne(this);
 
 		//Setup skill requirements
 		ag10 = new SkillRequirement(AGILITY, 10);
@@ -172,19 +173,10 @@ public class Agility extends ComplexStateQuestHelper
 		varrock.setRecommended(bootsOfLightness);
 		canifis.setRecommended(bootsOfLightness, gracefulOutfit);
 		falador.setRecommended(gracefulOutfit);
-
 		seersVillage.setRecommended(gracefulOutfit);
 		pollnivneach.setRecommended(gracefulOutfit);
-	}
-
-	private void setupSteps()
-	{
-		//Agility courses
-		rellekka = new ObjectStep(this, ObjectID.ROUGH_WALL_14946, new WorldPoint(2625, 2677, 0),
-			"Train agility at the Rellekka Rooftop Course.", Collections.EMPTY_LIST, Collections.singletonList(gracefulOutfit));
-
-		ardougne = new ObjectStep(this, ObjectID.WOODEN_BEAMS, new WorldPoint(2673, 3298, 0),
-			"Train agility at the Ardougne Rooftop Course.", Collections.EMPTY_LIST, Collections.singletonList(gracefulOutfit));
+		rellekka.setRecommended(gracefulOutfit);
+		ardougne.setRecommended(gracefulOutfit);
 	}
 
 	@Override
@@ -216,14 +208,10 @@ public class Agility extends ComplexStateQuestHelper
 		allSteps.add(falador.getPanelDetails());
 		allSteps.add(seersVillage.getPanelDetails());
 		allSteps.add(pollnivneach.getPanelDetails());
+		allSteps.add(rellekka.getPanelDetails());
+		allSteps.add(ardougne.getPanelDetails());
 
 
-		allSteps.add(
-			new PanelDetails("80 - 90: Rellekka", Collections.singletonList(rellekka))
-		);
-		allSteps.add(
-			new PanelDetails("90 - 99: Ardougne", Collections.singletonList(ardougne))
-		);
 		return allSteps;
 	}
 
