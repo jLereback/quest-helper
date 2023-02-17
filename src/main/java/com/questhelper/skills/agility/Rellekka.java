@@ -85,7 +85,7 @@ public class Rellekka extends AgilityCourse
 		secondGapZone = new Zone(new WorldPoint(2626, 3651, 3), new WorldPoint(2637, 3659, 3));
 		thirdGapZone = new Zone(new WorldPoint(2638, 3649, 3), new WorldPoint(2644, 3655, 3));
 		secondRopeZone = new Zone(new WorldPoint(2643, 3656, 3), new WorldPoint(2653, 3670, 3));
-		fishZone = new Zone(new WorldPoint(2626, 3665, 3), new WorldPoint(2655, 3685, 3));
+		fishZone = new Zone(new WorldPoint(2649, 3665, 3), new WorldPoint(2664, 3685, 3));
 	}
 
 	@Override
@@ -93,26 +93,26 @@ public class Rellekka extends AgilityCourse
 	{
 		//Rellekka obstacles
 		climbRoughWall = new ObjectStep(this.questHelper, ObjectID.ROUGH_WALL_14946, new WorldPoint(2625, 3677, 0),
-			"Climb the rough wall in the North-Western part of Rellekka, just south of the westernmost dock",
+			"Climb the rough wall in the North-Western part of Rellekka, just south of the westernmost dock.",
 			Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
-		leapFirstGap = new ObjectStep(this.questHelper, ObjectID.GAP_14947, new WorldPoint(2622, 3672, 3),
-			"Leap gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+		leapFirstGap = new ObjectStep(this.questHelper, ObjectID.GAP_14947, new WorldPoint(2622, 3670, 3),
+			"Leap across the gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		walkFirstRope = new ObjectStep(this.questHelper, ObjectID.TIGHTROPE_14987, new WorldPoint(2623, 3658, 3),
-			"Cross tightrope", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the tightrope.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
-		leapSecondGap = new ObjectStep(this.questHelper, ObjectID.GAP_14990, new WorldPoint(2630, 3655, 3),
-			"Leap gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+		leapSecondGap = new ObjectStep(this.questHelper, ObjectID.GAP_14990, new WorldPoint(2630, 3656, 3),
+			"Leap across the gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
-		hurdleGap = new ObjectStep(this.questHelper, ObjectID.GAP_14991, new WorldPoint(2644, 3653, 3),
-			"Hurdle gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+		hurdleGap = new ObjectStep(this.questHelper, ObjectID.GAP_14991, new WorldPoint(2643, 3654, 3),
+			"Hurdle across the gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		walkSecondRope = new ObjectStep(this.questHelper, ObjectID.TIGHTROPE_14992, new WorldPoint(2647, 3663, 3),
-			"Cross tightrope", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the tightrope.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
-		jumpInFish = new ObjectStep(this.questHelper, ObjectID.PILE_OF_FISH, new WorldPoint(2655, 3676, 3),
-			"Jump-in pile of fish", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+		jumpInFish = new ObjectStep(this.questHelper, ObjectID.PILE_OF_FISH, new WorldPoint(2654, 3676, 3),
+			"Jump down into the pile of fish.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 	}
 
 	@Override
@@ -126,7 +126,7 @@ public class Rellekka extends AgilityCourse
 		rellekkaStep.addStep(new Conditions(inSecondRopeZone), walkSecondRope);
 		rellekkaStep.addStep(new Conditions(inFishZone), jumpInFish);
 
-		rellekkaSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Rellekka Rooftop Course");
+		rellekkaSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Rellekka Rooftop Course.");
 		rellekkaSidebar.addSubSteps(climbRoughWall, leapFirstGap, walkFirstRope, leapSecondGap, hurdleGap, walkSecondRope, jumpInFish);
 	}
 
