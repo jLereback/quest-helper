@@ -94,32 +94,32 @@ public class Varrock extends AgilityCourse
 	{
 		//Varrock obstacles
 		climbRoughWall = new ObjectStep(this.questHelper, ObjectID.ROUGH_WALL_14412, new WorldPoint(3221, 3414, 0),
-			"Climb the rough wall on the east side of the General Store",
+			"Climb the rough wall on the east side of the General Store.",
 			Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		crossClothesLine = new ObjectStep(this.questHelper, ObjectID.CLOTHES_LINE, new WorldPoint(3213, 3414, 3),
-			"Cross clothes line", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the clothes line.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		leapFirstGap = new ObjectStep(this.questHelper, ObjectID.GAP_14414, new WorldPoint(3200, 3416, 3),
-			"Leap first gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Leap off the first gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		balanceWall = new ObjectStep(this.questHelper, ObjectID.WALL_14832, new WorldPoint(3192, 3416, 1),
-			"Balance wall", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Balance across the wall.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		leapSecondGap = new ObjectStep(this.questHelper, ObjectID.GAP_14833, new WorldPoint(3195, 3401, 3),
-			"Leap second gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Leap across second gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		leapThirdGap = new ObjectStep(this.questHelper, ObjectID.GAP_14834, new WorldPoint(3209, 3399, 3),
-			"Leap third gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Leap across third gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		leapFourthGap = new ObjectStep(this.questHelper, ObjectID.GAP_14835, new WorldPoint(3233, 3402, 3),
-			"Leap fourth gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Leap across fourth gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		hurdleLedge = new ObjectStep(this.questHelper, ObjectID.LEDGE_14836, new WorldPoint(3238, 3409, 3),
-			"Hurdle ledge", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Hurdle across the ledge.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpEdge = new ObjectStep(this.questHelper, ObjectID.EDGE, new WorldPoint(3238, 3416, 3),
-			"Jump-off edge", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump off the edge.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 	}
 
 	@Override
@@ -135,7 +135,8 @@ public class Varrock extends AgilityCourse
 		varrockStep.addStep(inLedgeZone, hurdleLedge);
 		varrockStep.addStep(inEdgeZone, jumpEdge);
 
-		varrockSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Varrock Rooftop Course");
+		varrockSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Varrock Rooftop Course, " +
+			"starting on the east side of the General Store.");
 		varrockSidebar.addSubSteps(climbRoughWall, crossClothesLine, leapFirstGap, balanceWall, leapSecondGap, leapThirdGap, leapFourthGap, hurdleLedge, jumpEdge, varrockStep);
 
 	}

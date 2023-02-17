@@ -89,22 +89,22 @@ public class SeersVillage extends AgilityCourse
 	{
 		//Seer's village obstacles
 		climbWall = new ObjectStep(this.questHelper, ObjectID.WALL_14927, new WorldPoint(2729, 3489, 0),
-			"Climb wall", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Climb up the wall outside the Seers' Bank.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpFirstGap = new ObjectStep(this.questHelper, ObjectID.GAP_14928, new WorldPoint(2720, 3494, 3),
-			"Jump first gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across first gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		crossTightrope = new ObjectStep(this.questHelper, ObjectID.TIGHTROPE_14932, new WorldPoint(2710, 3489, 2),
-			"Cross tightrope", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the tightrope.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpSecondGap = new ObjectStep(this.questHelper, ObjectID.GAP_14929, new WorldPoint(2712, 3476, 2),
-			"Jump second gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across second gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpThirdGap = new ObjectStep(this.questHelper, ObjectID.GAP_14930, new WorldPoint(2702, 3469, 3),
-			"Jump third gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across third gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpEdgeZone = new ObjectStep(this.questHelper, ObjectID.EDGE_14931, new WorldPoint(2703, 3463, 2),
-			"Jump edge", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump off the edge.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 	}
 
 	@Override

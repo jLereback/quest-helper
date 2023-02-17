@@ -96,19 +96,20 @@ public class Ardougne extends AgilityCourse
 	{
 		//Ardougne obstacles
 		climbWoodenBeam = new ObjectStep(this.questHelper, ObjectID.WOODEN_BEAMS, new WorldPoint(2729, 3489, 0),
-			"Climb-up Wooden Beams", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Climb up the wooden beams on the outside of the house south east of the East Ardougne Marketplace.",
+			Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 		jumpFirstGap = new ObjectStep(this.questHelper, ObjectID.GAP_15609, new WorldPoint(2729, 3489, 0),
-			"Jump Gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 		walkOnPlank = new ObjectStep(this.questHelper, ObjectID.PLANK_26635, new WorldPoint(2729, 3489, 0),
-			"Walk-on Plank", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Walk across the plank.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 		jumpSecondGap = new ObjectStep(this.questHelper, ObjectID.GAP_15610, new WorldPoint(2729, 3489, 0),
-			"Jump Gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 		jumpThirdGap = new ObjectStep(this.questHelper, ObjectID.GAP_15611, new WorldPoint(2729, 3489, 0),
-			"Jump Gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across another gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 		balanceRoof = new ObjectStep(this.questHelper, ObjectID.STEEP_ROOF, new WorldPoint(2729, 3489, 0),
-			"Balance-across Steep Roof", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Balance across the steep roof.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 		jumpForthGap = new ObjectStep(this.questHelper, ObjectID.GAP_15612, new WorldPoint(2729, 3489, 0),
-			"Balance-across Steep Roof", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Balance across the final steep roof.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 
 	}
@@ -124,7 +125,8 @@ public class Ardougne extends AgilityCourse
 		ardougneStep.addStep(new Conditions(inBalanceZone), balanceRoof);
 		ardougneStep.addStep(new Conditions(inForthGapZone), jumpForthGap);
 
-		ardougneSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Ardougne Rooftop Course");
+		ardougneSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Ardougne Rooftop Course, " +
+			"starting outside of the house south east of the East Ardougne Marketplace.");
 		ardougneSidebar.addSubSteps(climbWoodenBeam, jumpFirstGap, walkOnPlank, jumpSecondGap, jumpThirdGap, balanceRoof, jumpForthGap);
 
 	}

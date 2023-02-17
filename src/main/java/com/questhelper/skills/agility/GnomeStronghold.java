@@ -90,25 +90,25 @@ public class GnomeStronghold extends AgilityCourse
 	{
 		//Gnome Stronghold obstacles
 		walkLog = new ObjectStep(this.questHelper, ObjectID.LOG_BALANCE_23145, new WorldPoint(2474, 3435, 0),
-			"Walk-across log southeast of the Spirit tree in Gnome Stronghold", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Walk-across log south-east of the Spirit tree in Gnome Stronghold.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		climbFirstNet = new ObjectStep(this.questHelper, ObjectID.OBSTACLE_NET_23134, new WorldPoint(2473, 3425, 0),
-			"Climb-over net", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Climb over the west net.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		climbFirstTree = new ObjectStep(this.questHelper, ObjectID.TREE_BRANCH_23559, new WorldPoint(2473, 3422, 1),
-			"Climb tree branch", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Climb up the tree branch.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		walkRope = new ObjectStep(this.questHelper, ObjectID.BALANCING_ROPE_23557, new WorldPoint(2478, 3420, 2),
-			"Walk-on balancing rope", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Walk on the balancing rope.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		climbSecondTree = new ObjectStep(this.questHelper, ObjectID.TREE_BRANCH_23560, new WorldPoint(2486, 3419, 2),
-			"Climb-down tree branch", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Climb down the tree branch.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		climbSecondNet = new ObjectStep(this.questHelper, ObjectID.OBSTACLE_NET_23135, new WorldPoint(2485, 3426, 0),
-			"Climb-over net", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Climb over the east net.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		squeezePipe = new ObjectStep(this.questHelper, ObjectID.OBSTACLE_PIPE_23138, new WorldPoint(2484, 3431, 0),
-			"Squeeze-through pipe", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Squeeze through the pipe.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 	}
 
 	@Override
@@ -122,7 +122,7 @@ public class GnomeStronghold extends AgilityCourse
 		gnomeStep.addStep(inSecondNetZone, climbSecondNet);
 		gnomeStep.addStep(inPipeZone, squeezePipe);
 
-		gnomeSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Gnome Stronghold Agility Course");
+		gnomeSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Gnome Stronghold Agility Course, south-east of the Spirit tree in Gnome Stronghold.");
 		gnomeSidebar.addSubSteps(walkLog, climbFirstNet, climbFirstTree, walkRope, climbSecondTree, climbSecondNet, squeezePipe);
 	}
 

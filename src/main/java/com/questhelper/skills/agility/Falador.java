@@ -105,44 +105,44 @@ public class Falador extends AgilityCourse
 	{
 		//Falador obstacles
 		climbRoughWall = new ObjectStep(this.questHelper, ObjectID.ROUGH_WALL_14898, new WorldPoint(3036, 3341, 0),
-			"Climb the rough wall east of the Mining Guild basement entrance",
+			"Climb the rough wall east of the Mining Guild basement entrance.",
 			Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		crossFirstTightrope = new ObjectStep(this.questHelper, ObjectID.TIGHTROPE_14899, new WorldPoint(3040, 3343, 3),
-			"Cross first tightrope", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the first tightrope.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		crossHandHolds = new ObjectStep(this.questHelper, ObjectID.HAND_HOLDS_14901, new WorldPoint(3050, 3350, 3),
-			"Cross hand holds", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the handholds.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpFirstGap = new ObjectStep(this.questHelper, ObjectID.GAP_14903, new WorldPoint(3048, 3359, 3),
-			"Jump first gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the first gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpSecondGap = new ObjectStep(this.questHelper, ObjectID.GAP_14904, new WorldPoint(3044, 3363, 3),
-			"Jump second gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the second gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		crossSecondTightrope = new ObjectStep(this.questHelper, ObjectID.TIGHTROPE_14905, new WorldPoint(3034, 3362, 3),
-			"Cross second tightrope", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the second tightrope.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		crossThirdTightrope = new ObjectStep(this.questHelper, ObjectID.TIGHTROPE_14911, new WorldPoint(3026, 3353, 3),
-			"Cross third tightrope", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the third tightrope.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpThirdGap = new ObjectStep(this.questHelper, ObjectID.GAP_14919, new WorldPoint(3017, 3352, 3),
-			"Jump third gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the third gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpFirstLedge = new ObjectStep(this.questHelper, ObjectID.LEDGE_14920, new WorldPoint(3015, 3346, 3),
-			"Jump first ledge", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the first ledge.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpSecondLedge = new ObjectStep(this.questHelper, ObjectID.LEDGE_14921, new WorldPoint(3012, 3343, 3),
-			"Jump second ledge", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the second ledge.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpThirdLedge = new ObjectStep(this.questHelper, ObjectID.LEDGE_14922, new WorldPoint(3013, 3334, 3),
-			"Jump third ledge", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the third ledge.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpFourthLedge = new ObjectStep(this.questHelper, ObjectID.LEDGE_14924, new WorldPoint(3018, 3333, 3),
-			"Jump fourth ledge", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the fourth ledge.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpEdge = new ObjectStep(this.questHelper, ObjectID.EDGE_14925, new WorldPoint(3025, 3333, 3),
-			"Jump edge", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump off the edge.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 	}
 
 	@Override
@@ -162,7 +162,8 @@ public class Falador extends AgilityCourse
 		faladorStep.addStep(inFourthLedgeZone, jumpFourthLedge);
 		faladorStep.addStep(inEdgeZone, jumpEdge);
 
-		faladorSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Falador Rooftop Course");
+		faladorSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Falador Rooftop Course, " +
+			"starting east of the Mining Guild basement entrance.");
 		faladorSidebar.addSubSteps(climbRoughWall, crossFirstTightrope, crossHandHolds, jumpFirstGap, jumpSecondGap, crossSecondTightrope,
 			crossThirdTightrope, jumpThirdGap, jumpFirstLedge, jumpSecondLedge, jumpThirdLedge, jumpFourthLedge, jumpEdge);
 

@@ -90,26 +90,26 @@ public class DraynorVillage extends AgilityCourse
 	{
 		//Draynor Village obstacles
 		climbRoughWall = new ObjectStep(this.questHelper, ObjectID.ROUGH_WALL, new WorldPoint(3103, 3279, 0),
-			"Climb the rough wall just northeast of the gate of the big wheat-field in Draynor Village",
+			"Climb the rough wall just northeast of the gate of the big wheat-field in Draynor Village.",
 			Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		walkFirstRope = new ObjectStep(this.questHelper, ObjectID.TIGHTROPE, new WorldPoint(3098, 3277, 3),
-			"Cross tightrope", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the tightrope.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		walkSecondRope = new ObjectStep(this.questHelper, ObjectID.TIGHTROPE_11406, new WorldPoint(3092, 3276, 3),
-			"Cross tightrope", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the next tightrope.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		balanceWall = new ObjectStep(this.questHelper, ObjectID.NARROW_WALL, new WorldPoint(3089, 3264, 3),
-			"Balance narrow wall", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Balance across thr narrow wall.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpUpWall = new ObjectStep(this.questHelper, ObjectID.WALL_11630, new WorldPoint(3088, 3256, 3),
-			"Jump-up wall", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump up the wall.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpGap = new ObjectStep(this.questHelper, ObjectID.GAP_11631, new WorldPoint(3095, 3255, 3),
-			"Climb-over gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Climb over the gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		climbDownCrate = new ObjectStep(this.questHelper, ObjectID.CRATE_11632, new WorldPoint(3102, 3261, 3),
-			"Climb-down crate", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Climb down onto the crate.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 	}
 
 	@Override
@@ -123,7 +123,8 @@ public class DraynorVillage extends AgilityCourse
 		draynorStep.addStep(inGapZone, jumpGap);
 		draynorStep.addStep(inCrateZone, climbDownCrate);
 
-		draynorSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Draynor Village Rooftop Course");
+		draynorSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Draynor Village Rooftop Course" +
+			", starting just northeast of the gate of the big wheat-field in Draynor Village.");
 		draynorSidebar.addSubSteps(climbRoughWall, walkFirstRope, walkSecondRope, balanceWall, jumpUpWall, jumpGap, climbDownCrate);
 	}
 

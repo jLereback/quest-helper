@@ -93,7 +93,7 @@ public class Rellekka extends AgilityCourse
 	{
 		//Rellekka obstacles
 		climbRoughWall = new ObjectStep(this.questHelper, ObjectID.ROUGH_WALL_14946, new WorldPoint(2625, 3677, 0),
-			"Climb the rough wall in the North-Western part of Rellekka, just south of the westernmost dock.",
+			"Climb the rough wall in the north-western part of Rellekka, just south of the westernmost dock.",
 			Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		leapFirstGap = new ObjectStep(this.questHelper, ObjectID.GAP_14947, new WorldPoint(2622, 3670, 3),
@@ -126,7 +126,8 @@ public class Rellekka extends AgilityCourse
 		rellekkaStep.addStep(new Conditions(inSecondRopeZone), walkSecondRope);
 		rellekkaStep.addStep(new Conditions(inFishZone), jumpInFish);
 
-		rellekkaSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Rellekka Rooftop Course.");
+		rellekkaSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Rellekka Rooftop Course, " +
+			"starting in the north-western part of Rellekka, just south of the westernmost dock.");
 		rellekkaSidebar.addSubSteps(climbRoughWall, leapFirstGap, walkFirstRope, leapSecondGap, hurdleGap, walkSecondRope, jumpInFish);
 	}
 

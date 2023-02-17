@@ -95,31 +95,31 @@ public class Pollnivneach extends AgilityCourse
 	{
 		//Pollnivneach obstacles
 		climbBasket = new ObjectStep(this.questHelper, ObjectID.BASKET_14935, new WorldPoint(3351, 2962, 0),
-			"Climb basket", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Climb onto the basket south of the Camel Store in Pollnivneach.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpUpMarketStall = new ObjectStep(this.questHelper, ObjectID.MARKET_STALL_14936, new WorldPoint(3350, 2971, 1),
-			"Jump-up market stall", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump over the market stall.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		grabBanner = new ObjectStep(this.questHelper, ObjectID.BANNER_14937, new WorldPoint(3357, 2979, 1),
-			"Grab banner", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Swing over the banner.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		leapGap = new ObjectStep(this.questHelper, ObjectID.GAP_14938, new WorldPoint(3364, 2977, 1),
-			"Leap gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Leap across the gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpUpTree = new ObjectStep(this.questHelper, ObjectID.TREE_14939, new WorldPoint(3368, 2978, 1),
-			"Jump-up tree", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump over the tree.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		climbRoughWall = new ObjectStep(this.questHelper, ObjectID.ROUGH_WALL_14940, new WorldPoint(3365, 2982, 1),
-			"CLimb rough wall", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"CLimb up the rough wall.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		crossMonkeyBars = new ObjectStep(this.questHelper, ObjectID.MONKEYBARS, new WorldPoint(3358, 2985, 2),
-			"Cross monkey bars", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the monkey bars.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpUpTree2 = new ObjectStep(this.questHelper, ObjectID.TREE_14944, new WorldPoint(3360, 2997, 2),
-			"Jump-up tree", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump over the tree.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpUpDryingLine = new ObjectStep(this.questHelper, ObjectID.DRYING_LINE, new WorldPoint(3363, 3000, 2),
-			"Jump-up drying line", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Climb down using the drying line.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 	}
 
 	@Override
@@ -136,7 +136,7 @@ public class Pollnivneach extends AgilityCourse
 		pollnivneachStep.addStep(new Conditions(inSecondTreeZone), jumpUpTree2);
 		pollnivneachStep.addStep(new Conditions(inDryingLineZone), jumpUpDryingLine);
 
-		pollnivneachSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Pollnivneach Rooftop Course");
+		pollnivneachSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Pollnivneach Rooftop Course, starting outside the Camel Store.");
 		pollnivneachSidebar.addSubSteps(climbBasket, jumpUpMarketStall, grabBanner, leapGap, jumpUpTree, climbRoughWall, crossMonkeyBars, jumpUpTree2, jumpUpDryingLine, pollnivneachStep);
 	}
 

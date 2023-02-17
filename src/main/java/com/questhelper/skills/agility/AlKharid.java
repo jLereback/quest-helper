@@ -93,29 +93,29 @@ public class AlKharid extends AgilityCourse
 	{
 		//Al Kharid obstacles
 		climbRoughWall = new ObjectStep(this.questHelper, ObjectID.ROUGH_WALL_11633, new WorldPoint(3273, 3195, 0),
-			"Climb the rough wall just southeast of the Gnome Glider in Al Kharid",
+			"Climb the rough wall just southeast of the Gnome Glider in Al Kharid.",
 			Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		walkFirstRope = new ObjectStep(this.questHelper, ObjectID.TIGHTROPE_14398, new WorldPoint(3272, 3181, 3),
-			"Cross tightrope", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the tightrope.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		swingCable = new ObjectStep(this.questHelper, ObjectID.CABLE, new WorldPoint(3269, 3166, 3),
-			"Swing-across cable", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Swing across the cable.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		gripZipLine = new ObjectStep(this.questHelper, ObjectID.ZIP_LINE_14403, new WorldPoint(3303, 3163, 3),
-			"Teeth-grip zip line", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Teeth-grip the zip line.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		swingTree = new ObjectStep(this.questHelper, ObjectID.TROPICAL_TREE_14404, new WorldPoint(3318, 3166, 1),
-			"Swing-across tropical tree", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Swing across the tropical tree.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		climbBeams = new ObjectStep(this.questHelper, ObjectID.ROOF_TOP_BEAMS, new WorldPoint(3316, 3179, 2),
-			"Climb roof top beams", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Climb the roof top beams.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		walkSecondRope = new ObjectStep(this.questHelper, ObjectID.TIGHTROPE_14409, new WorldPoint(3313, 3186, 3),
-			"Cross tightrope", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Cross the tightrope.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpGap = new ObjectStep(this.questHelper, ObjectID.GAP_14399, new WorldPoint(3300, 3193, 3),
-			"Jump gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump down the gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 	}
 
 	@Override

@@ -92,29 +92,29 @@ public class Canifis extends AgilityCourse
 	{
 		//Canifis obstacles
 		climbTallTree = new ObjectStep(this.questHelper, ObjectID.TALL_TREE_14843, new WorldPoint(3507, 3489, 0),
-			"Climb the tall tree just north of the bank in Canifis",
+			"Climb the tall tree just north of the bank in Canifis.",
 			Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpFirstGap = new ObjectStep(this.questHelper, ObjectID.GAP_14844, new WorldPoint(3506, 3498, 2),
-			"Jump first gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the first gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpSecondGap = new ObjectStep(this.questHelper, ObjectID.GAP_14845, new WorldPoint(3497, 3504, 2),
-			"Jump second gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the second gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpThirdGap = new ObjectStep(this.questHelper, ObjectID.GAP_14848, new WorldPoint(3486, 3499, 2),
-			"Jump third gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the third gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpFourthGap = new ObjectStep(this.questHelper, ObjectID.GAP_14846, new WorldPoint(3478, 3492, 3),
-			"Jump fourth gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the fourth gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		vaultPoleVault = new ObjectStep(this.questHelper, ObjectID.POLEVAULT, new WorldPoint(3480, 3483, 2),
-			"Vault pole-vault", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Vault across the roofs.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpFifthGap = new ObjectStep(this.questHelper, ObjectID.GAP_14847, new WorldPoint(3503, 3476, 3),
-			"Jump fifth gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the fifth gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 
 		jumpSixthGap = new ObjectStep(this.questHelper, ObjectID.GAP_14897, new WorldPoint(3510, 3483, 2),
-			"Jump sixth gap", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
+			"Jump across the sixth gap.", Collections.EMPTY_LIST, Arrays.asList(recommendedItems));
 	}
 
 	@Override
@@ -129,9 +129,9 @@ public class Canifis extends AgilityCourse
 		canifisStep.addStep(inFifthGapZone, jumpFifthGap);
 		canifisStep.addStep(inSixthGapZone, jumpSixthGap);
 
-		canifisSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Canifis Rooftop Course, starting just north of Canifis Bank.\n\n" +
-			"40-60 Agility: Canifis Rooftop Course is the best source of Mark of Grace until 60 Agility.\n" +
-			"Stay on Canifis Rooftop Course for fastest spawn of Mark of Grace until 60 Agility, then go directly to Seer's Village");
+		canifisSidebar = new DetailedQuestStep(this.questHelper, "Train agility at the Canifis Rooftop Course, starting just north of Canifis Bank.");
+		canifisSidebar.addText("40-60 Agility: Canifis Rooftop Course is the best source of Mark of Grace until 60 Agility.");
+		canifisSidebar.addText("Stay on Canifis Rooftop Course for fastest spawn of Mark of Grace until 60 Agility, then go directly to Seer's Village");
 		canifisSidebar.addSubSteps(climbTallTree, jumpFirstGap, jumpSecondGap, jumpThirdGap, jumpFourthGap, vaultPoleVault, jumpFifthGap, jumpSixthGap, canifisStep);
 
 	}
