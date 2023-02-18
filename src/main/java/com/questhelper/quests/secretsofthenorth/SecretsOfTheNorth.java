@@ -42,6 +42,7 @@ import com.questhelper.requirements.util.Operation;
 import com.questhelper.requirements.var.VarbitRequirement;
 import com.questhelper.requirements.widget.WidgetTextRequirement;
 import com.questhelper.rewards.ExperienceReward;
+import com.questhelper.rewards.QuestPointReward;
 import com.questhelper.rewards.UnlockReward;
 import com.questhelper.steps.ConditionalStep;
 import com.questhelper.steps.DetailedQuestStep;
@@ -417,7 +418,7 @@ public class SecretsOfTheNorth extends BasicQuestHelper
 
 		downStaircaseToKhaz = new ObjectStep(this, ObjectID.STAIRCASE_46705, "Climb down the staircase.");
 		speakToBarman = new NpcStep(this, NpcID.KHAZARD_BARMAN, new WorldPoint(2566, 3140, 0),
-			"Head to the Fight Arena Bar and talk to th Khazard Barman.", coins, combatGear);
+			"Head to the Fight Arena Bar and talk to the Khazard Barman.", coins, combatGear);
 		speakToBarman.addDialogStep("Do you know anyone called Evelot?");
 		inspectBarrel = new ObjectStep(this, 46873, new WorldPoint(2568, 3152, 0),
 			"Inspect the barrels outside the Fight Arena Bar entrance.",  combatGear);
@@ -597,6 +598,12 @@ public class SecretsOfTheNorth extends BasicQuestHelper
 		req.add(new SkillRequirement(Skill.THIEVING, 64, false));
 		req.add(new SkillRequirement(Skill.HUNTER, 56, false));
 		return req;
+	}
+
+	@Override
+	public QuestPointReward getQuestPointReward()
+	{
+		return new QuestPointReward(2);
 	}
 
 	@Override
