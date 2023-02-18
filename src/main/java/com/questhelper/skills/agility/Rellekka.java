@@ -136,7 +136,8 @@ public class Rellekka extends AgilityCourse
 	{
 		rellekkaPanels = new PanelDetails("80 - 90: Rellekka", Collections.singletonList(rellekkaSidebar)
 		);
-		rellekkaPanels.setLockingStep(this.rellekkaStep);
+		//TODO::Remove setLockingStep
+		//rellekkaPanels.setLockingStep(this.rellekkaStep);
 		return rellekkaPanels;
 	}
 }

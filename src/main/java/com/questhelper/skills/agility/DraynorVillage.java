@@ -133,7 +133,8 @@ public class DraynorVillage extends AgilityCourse
 	{
 		draynorPanels = new PanelDetails("10 - 20: Draynor Village", Collections.singletonList(draynorSidebar)
 		);
-		draynorPanels.setLockingStep(this.draynorStep);
+		//TODO::Remove setLockingStep
+		//draynorPanels.setLockingStep(this.draynorStep);
 		return draynorPanels;
 	}
 }

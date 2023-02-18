@@ -131,7 +131,8 @@ public class GnomeStronghold extends AgilityCourse
 	{
 		gnomePanels = new PanelDetails("1 - 10: Gnome Stronghold", Collections.singletonList(gnomeSidebar)
 		);
-		gnomePanels.setLockingStep(this.gnomeStep);
+		//TODO::Remove setLockingStep
+		//gnomePanels.setLockingStep(this.gnomeStep);
 
 		return gnomePanels;
 	}

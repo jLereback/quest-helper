@@ -136,7 +136,8 @@ public class Ardougne extends AgilityCourse
 	{
 		ardougnePanels = new PanelDetails("90 - 99: Ardougne", Collections.singletonList(ardougneSidebar)
 		);
-		ardougnePanels.setLockingStep(this.ardougneStep);
+		//TODO::Remove setLockingStep
+		//ardougnePanels.setLockingStep(this.ardougneStep);
 		return ardougnePanels;
 	}
 }
