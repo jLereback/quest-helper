@@ -139,8 +139,6 @@ public class AlKharid extends AgilityCourse
 	{
 		alKharidPanels = new PanelDetails("20 - 30: Al Kharid", Collections.singletonList(alKharidSidebar)
 		);
-		alKharidPanels.setLockingStep(this.alKharidStep);
-
 		return alKharidPanels;
 	}
 }

@@ -174,8 +174,6 @@ public class Falador extends AgilityCourse
 	{
 		faladorPanels = new PanelDetails("50 - 60: Falador", Collections.singletonList(faladorSidebar)
 		);
-		faladorPanels.setLockingStep(this.faladorStep);
-
 		return faladorPanels;
 	}
 }

@@ -146,8 +146,6 @@ public class Varrock extends AgilityCourse
 	{
 		varrockPanels = new PanelDetails("30 - 40: Varrock", Collections.singletonList(varrockSidebar)
 		);
-		varrockPanels.setLockingStep(this.varrockStep);
-
 		return varrockPanels;
 	}
 }

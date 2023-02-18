@@ -145,8 +145,6 @@ public class Pollnivneach extends AgilityCourse
 	{
 		pollnivneachPanels = new PanelDetails("70 - 80: Pollnivneach", Collections.singletonList(pollnivneachSidebar)
 		);
-		pollnivneachPanels.setLockingStep(this.pollnivneachStep);
-
 		return pollnivneachPanels;
 	}
 }
