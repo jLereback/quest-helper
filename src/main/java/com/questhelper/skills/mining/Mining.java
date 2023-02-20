@@ -136,6 +136,7 @@ public class Mining extends ComplexStateQuestHelper
 		).isNotConsumed();
 		runePickaxe = runePickaxe.showConditioned(new Conditions(mi41, at40)
 		).isNotConsumed();
+		runePickaxe.addAlternates(ItemID.GILDED_PICKAXE);
 	}
 
 	public void setupConditions()

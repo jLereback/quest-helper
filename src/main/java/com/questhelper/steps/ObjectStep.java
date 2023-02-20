@@ -24,9 +24,12 @@
  */
 package com.questhelper.steps;
 
+import com.questhelper.QuestHelperConfig;
+import static com.questhelper.QuestHelperConfig.ObjectHighlightStyle.OUTLINE;
 import com.questhelper.QuestHelperPlugin;
 import com.questhelper.questhelpers.QuestHelper;
 import com.questhelper.requirements.Requirement;
+import com.questhelper.skills.woodcutting.WoodcuttingMember;
 import com.questhelper.steps.overlay.DirectionArrow;
 import com.questhelper.steps.tools.QuestPerspective;
 import java.awt.Color;
@@ -90,6 +93,13 @@ public class ObjectStep extends DetailedQuestStep
 		this.objectID = objectID;
 	}
 
+	public ObjectStep(QuestHelper questHelper, int objectID, WorldPoint worldPoint, String text, boolean showAllInArea, List<Requirement> requirements, List<Requirement> recommended)
+	{
+		super(questHelper, worldPoint, text, requirements, recommended);
+		this.showAllInArea = showAllInArea;
+		this.objectID = objectID;
+	}
+
 	public ObjectStep(QuestHelper questHelper, int objectID, String text, Requirement... requirements)
 	{
 		super(questHelper, null, text, requirements);
@@ -101,13 +111,6 @@ public class ObjectStep extends DetailedQuestStep
 		super(questHelper, worldPoint, text, requirements, recommended);
 		this.objectID = objectID;
 		this.showAllInArea = false;
-	}
-
-	public ObjectStep(QuestHelper questHelper, int objectID, WorldPoint worldPoint, String text, boolean showAllInArea, List<Requirement> recommended, Requirement... requirements)
-	{
-		super(questHelper, worldPoint, text, recommended, requirements);
-		this.objectID = objectID;
-		this.showAllInArea = showAllInArea;
 	}
 
 	public void setRevalidateObjects(boolean value)
@@ -312,20 +315,34 @@ public class ObjectStep extends DetailedQuestStep
 
 				Color configColor = getQuestHelper().getConfig().targetOverlayColor();
 
-				switch (questHelper.getConfig().highlightStyleObjects())
+				QuestHelperConfig.ObjectHighlightStyle highlightStyle = visibilityHelper.isObjectVisible(tileObject)
+					? questHelper.getConfig().highlightStyleObjects()
+					: OUTLINE;
+
+				switch (highlightStyle)
 				{
 					case CLICK_BOX:
 						Color fillColor = new Color(configColor.getRed(), configColor.getGreen(), configColor.getBlue(), 20);
-						OverlayUtil.renderHoverableArea(graphics, tileObject.getClickbox(), mousePosition, fillColor,
+						OverlayUtil.renderHoverableArea(
+							graphics,
+							tileObject.getClickbox(),
+							mousePosition,
+							fillColor,
 							questHelper.getConfig().targetOverlayColor().darker(),
-							questHelper.getConfig().targetOverlayColor());
+							questHelper.getConfig().targetOverlayColor()
+						);
 						break;
 					case OUTLINE:
-						modelOutlineRenderer.drawOutline(tileObject, questHelper.getConfig().outlineThickness(), configColor, questHelper.getConfig().outlineFeathering());
+						modelOutlineRenderer.drawOutline(
+							tileObject,
+							questHelper.getConfig().outlineThickness(),
+							configColor,
+							questHelper.getConfig().
+								outlineFeathering()
+						);
 						break;
 					default:
 				}
-
 			}
 		}
 
