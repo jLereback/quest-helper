@@ -106,6 +106,7 @@ public class ClientOfKourend extends BasicQuestHelper
 	public void setupRequirements()
 	{
 		feather = new ItemRequirement("Feather", ItemID.FEATHER);
+		feather.setTooltip("Can be purchased from Gerrant's Fishy Business in Port Sarim.");
 		feather.addAlternates(ItemID.BLUE_FEATHER, ItemID.ORANGE_FEATHER, ItemID.RED_FEATHER, ItemID.YELLOW_FEATHER,
 			ItemID.EAGLE_FEATHER, ItemID.STRIPY_FEATHER);
 		feather.setHighlightInInventory(true);
