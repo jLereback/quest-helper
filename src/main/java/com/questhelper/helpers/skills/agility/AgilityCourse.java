@@ -22,7 +22,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.questhelper.skills.agility;
+package com.questhelper.helpers.skills.agility;
 
 import com.questhelper.panel.PanelDetails;
 import com.questhelper.questhelpers.QuestHelper;
